@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #2148C0;;
+    height: 100vh;
+}
+
+.container > .login {
+    padding: 20% 0;
+}
+.container svg{
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*transform: translate(-2rem, 2rem);*/
+}
+
+.container > .round {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    border-radius: 438px;
+    width: 724px;
+    height: 724px;
+    flex-shrink: 0;
+    background: #264ECA;
+}

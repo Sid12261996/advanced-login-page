@@ -1,10 +1,11 @@
 /* Components */
-import { Counter } from './components/Counter/Counter'
+import LoginLayout from "@/app/components/LoginLayout/LoginLayout";
 
 export default function IndexPage() {
-  return <Counter />
+    return <LoginLayout/>
+
 }
 
 export const metadata = {
-  title: 'Redux Toolkit',
+    title: 'Login',
 }
