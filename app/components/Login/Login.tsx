@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './login.module.css';
 
-function Login(props) {
+function Login() {
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>

@@ -2,7 +2,7 @@ import React from 'react';
 import Login from "@/app/components/Login/Login";
 import styles from './login.layout.module.css';
 
-function LoginLayout(props) {
+function LoginLayout() {
     return (
         <div className={styles.container}>
             <div className={styles.round}>
