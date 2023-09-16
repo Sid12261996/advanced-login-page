@@ -5,7 +5,7 @@ function Login() {
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>
-                <img src="/assets/Group.svg" alt="cart"/>
+                <img src="./assets/Group.svg" alt="cart"/>
             </div>
             <div className={styles.inputContainer}>
                 <input type="text" placeholder="USERNAME"/>
