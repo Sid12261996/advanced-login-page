@@ -76,7 +76,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Show all files/folders
-        run: ls -a
+        run: ls -a && cat next.config.js && cat next.config.mjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
