@@ -2,28 +2,58 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    background: #2148C0;;
-    height: 100vh;
+    background: #2148C0;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .container > .login {
     padding: 20% 0;
 }
-.container svg{
-    position: fixed;
+
+.container .backgroundimage {
+    position: absolute;
     top: 0;
     right: 0;
     /*transform: translate(-2rem, 2rem);*/
 }
 
+.backgroundimage > img {
+    height: 100vh;
+}
+
 .container > .round {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     transform: translate(-50%, 50%);
-    border-radius: 438px;
     width: 724px;
     height: 724px;
     flex-shrink: 0;
+    border-radius: 724px;
     background: #264ECA;
+    z-index: 1;
+}
+
+.round .innerround {
+    position: relative;
+    border-radius: 572px;
+    background: #244BC5;
+    width: 572px;
+    height: 572px;
+    flex-shrink: 0;
+    transform: translate(10%, 10%);
+    z-index: 2;
+}
+
+.innerround .nestedinnerround {
+    position: relative;
+    width: 438px;
+    height: 438px;
+    flex-shrink: 0;
+    border-radius: 438px;
+    transform: translate(12%, 12%);
+    background: #274FC7;
+    z-index: 3;
 }

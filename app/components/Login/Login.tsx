@@ -6,11 +6,13 @@ import {useRouter} from "next/navigation";
 
 function Login() {
     const [formValues, setFormValues] = useState({username: '', password: ''});
+    const [isValidPassword, setValidPassword] = useState(true);
     const router = useRouter();
     const LOGIN_SUCCESS: string = 'success';
     const regex = `^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\\-=\\[\\]{};':"\\\\|,.<>\\/?])[a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};':"\\\\|,.<>\\/?]+$`
 
     function validatePassword(password: string): boolean {
+        if (!password) return true;
         const regexExp = new RegExp(regex);
         return regexExp.test(password);
     }
@@ -35,6 +37,7 @@ function Login() {
 
     function setFormValuesFromEvent(event: ChangeEvent<HTMLInputElement>) {
         const {name, value} = event.target;
+        if (name === "password") setValidPassword(validatePassword(value));
         setFormValues({...formValues, [name]: value});
     }
 
@@ -54,8 +57,7 @@ function Login() {
                        onChange={(event) => setFormValuesFromEvent(event)}/>
 
             </div>
-            {/*{validatePassword(formValues['password']) && <span className={styles.errormsg}>Wrong Combination</span>}*/}
-            <span className={styles.errormsg}>Wrong Combination</span>
+            <span className={`errormsg ${isValidPassword ? '' : 'showerror'}`}>Wrong Combination</span>
             <div className={styles.button}>
                 <button onClick={() => onLogin()}>LOGIN</button>
             </div>

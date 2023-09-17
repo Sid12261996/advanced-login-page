@@ -14,3 +14,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.errormsg {
+  color: red;
+  font-size: 0.7rem;
+  text-align: right;
+  margin-top: 0.4em;
+  display: inline;
+  visibility: hidden;
+}
+
+.showerror {
+  /*display: inline;*/
+  visibility: visible;
+}
