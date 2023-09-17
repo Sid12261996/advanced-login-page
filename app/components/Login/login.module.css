@@ -3,7 +3,7 @@
     background: #2148C0;
     position: relative;
     z-index: 2;
-    width: 23vw;
+    min-width: 23vw;
 }
 
 .imgcontainer {
