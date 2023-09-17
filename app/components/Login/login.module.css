@@ -1,24 +1,82 @@
 .container {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     background: #2148C0;
     position: relative;
     z-index: 2;
     width: 23vw;
 }
 
-.container > div {
-    padding: 1rem 1rem;
-}
-
-.img-container{
+.imgcontainer {
     display: flex;
     width: 100%;
+    margin-bottom: 4em;
 }
-.img-container > img {
+
+.imgcontainer > img {
     margin: auto;
 }
 
-.container button {
+.container div > input {
+    padding: 0.9rem;
+    width: 100%;
+    background: #2148C0;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.container p {
+    color: #FFF;
+    text-align: right;
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0.8em 0 0;
+    line-height: normal;
+}
+
+.inputcontainer {
+    display: flex;
+    border: 1px solid #FFF;
+    margin: 1.1rem 0 0 0;
+    padding: 0 0 0 0.7rem;
+    border-radius: 4px;
+}
+
+.inputcontainer > img {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.inputcontainer input::placeholder {
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 142.857% */
+    text-transform: uppercase;
+}
+
+.inputcontainer > input {
+    border: none;
+    outline: none;
+}
+
+.container > img {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 2rem
+
+}
+
+.button{
+    margin-top: 2.5em;
+}
+
+.button > button {
     border-radius: 4px;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30);
@@ -42,45 +100,21 @@
     max-width: 100%;
     overflow: visible;
     position: relative;
-    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    will-change: transform,opacity;
+    will-change: transform, opacity;
     width: 100%;
     padding: 0.5rem;
     justify-content: center;
 
 }
 
-.container div > input {
-    padding: 0.9rem;
-    width: 100%;
-    background: #2148C0;
-    border-radius: 4px;
-    border: 1px solid #FFF;
-    color: #fff;
-}
-
-.container p{
-    color: #FFF;
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-    cursor: pointer;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.input-container input::placeholder {
-    color: #fff;
-    opacity: 1;
-}
-
-.container > img {
-    width: 6rem;
-    height: 6rem;
-    margin-left: 2rem
-
+.errormsg{
+    color: red;
+    display: inline;
+    font-size: 0.7rem;
+    text-align: right;
+    margin-top: 0.4em;
 }

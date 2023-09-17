@@ -9,7 +9,6 @@ import {
   useSelector,
   useDispatch,
   selectCount,
-  incrementIfOddAsync,
 } from '@/lib/redux'
 import styles from './counter.module.css'
 
