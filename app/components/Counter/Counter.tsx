@@ -9,7 +9,6 @@ import {
   useSelector,
   useDispatch,
   selectCount,
-  incrementAsync,
   incrementIfOddAsync,
 } from '@/lib/redux'
 import styles from './counter.module.css'
@@ -52,18 +51,6 @@ export const Counter = () => {
           }
         >
           Add Amount
-        </button>
-        <button
-          className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(incrementAmount))}
-        >
-          Add Async
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementIfOddAsync(incrementAmount))}
-        >
-          Add If Odd
         </button>
       </div>
     </div>
