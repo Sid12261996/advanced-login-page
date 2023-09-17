@@ -1,4 +1,4 @@
 export const LOGIN_CREDENTIALS = {
-    username : 'test',
-    password : '123'
+    username : 'test@luxpmsoft.com',
+    password : 'test1234!'
 }

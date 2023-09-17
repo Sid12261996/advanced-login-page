@@ -1,7 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background: #2148C0;
     max-height: 100vh;
     overflow: hidden;
@@ -10,13 +10,13 @@
 
 .container > .login {
     padding: 20% 0;
+    min-width: 30vw;
 }
 
 .container .backgroundimage {
     position: absolute;
     top: 0;
     right: 0;
-    /*transform: translate(-2rem, 2rem);*/
 }
 
 .backgroundimage > img {
@@ -56,4 +56,17 @@
     transform: translate(12%, 12%);
     background: #274FC7;
     z-index: 3;
+}
+
+@media only screen and (max-width: 800px) {
+    .container > .login {
+        min-width: 30vw;
+    }
+
+    .container > .round, .container .backgroundimage {
+        display: none;
+    }
+    .container {
+        min-height: 100vh;
+    }
 }
